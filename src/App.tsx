@@ -1,31 +1,52 @@
 import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
 import "./App.css";
+import { Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Router,
+  Navigate,
+} from "react-router-dom";
 
 // pages
 import Home from "./pages/Home";
 import Create from "./pages/Create";
+import Signup from "./pages/Signup";
+import Signin from "./pages/Signin";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="nav">
-        <div className="nav-a">
-          <h1>LOCALHUB</h1>
-        </div>
-        <div className="nav-b">
-          <p>Home</p>
-          <p>Create New Buisness</p>
-        </div>
-      </div>
-      <Home></Home>
-
-      <div className="footer"></div>
+      <Home />
+      <Create />
     </>
+    /*}
+      <BrowserRouter>
+        <div className="nav">
+          <div className="nav-a">
+            <h1>LOCALHUB</h1>
+          </div>
+          <div className="nav-b">
+            <Link to="/">Home</Link>
+            <Link to="create">Create New Buisness</Link>
+          </div>
+        </div>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/create" element={<Create />} />
+        </Routes>
+      </BrowserRouter>
+
+      {/* Add footer later 
+      <div className="footer"></div>
+      <
+      */
   );
 }
 

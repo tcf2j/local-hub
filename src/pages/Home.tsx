@@ -1,11 +1,17 @@
-import supabase from "../config/supabaseClient";
+import { supabase } from "../config/supabaseClient";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 //components
 import BusinessCard from "../components/BusinessCard";
 import Create from "./Create";
 
 function Home() {
+  const nav = useNavigate();
+  const navigate = () => {
+    nav("/signup");
+  };
+
   const [fetchError, setFetchError] = useState(null);
   const [businesses, setBusinesses] = useState(null);
 
@@ -41,7 +47,7 @@ function Home() {
         </div>
       )}
       <div>
-        <Create />
+        <button onClick={navigate}>Signup</button>
       </div>
     </div>
   );

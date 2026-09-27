@@ -12,7 +12,7 @@ The initial goal is to allow local businesses to claim and manage their listings
 - TypeScript
 - Tailwind CSS
 - PostgreSQL
-- Prisma
+- Supabase
 - Git/GitHub
 
 ## Decision: Next.js
@@ -33,11 +33,16 @@ TypeScript provides stronger type safety and helps make the application easier t
 
 The application will contain relational data such as users, businesses, categories, and business ownership relationships. PostgreSQL gives the project a relational database to learn and build against.
 
-## Decision: Prisma
+## Decision: Supabase
 
 ### Why
 
-Prisma will provide a structured way to interact with PostgreSQL while allowing me to learn database models, relationships, queries, and migrations.
+Supabase provides PostgreSQL along with authentication,
+database access, storage, and other backend functionality.
+
+Using Supabase allows me to learn full-stack development
+while using established backend services instead of
+building those services completely from scratch.
 
 ## Initial Architecture
 

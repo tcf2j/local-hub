@@ -1,6 +1,6 @@
 import { use, useState } from "react";
 
-import supabase from "../config/supabaseClient";
+import { supabase } from "../config/supabaseClient";
 
 const Create = () => {
   const [name, setName] = useState("");
