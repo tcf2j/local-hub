@@ -37,6 +37,9 @@ function Signup() {
 
   return (
     <div className="page signup">
+      <div className="nav text-white">
+        <h1 className="font-bold">LOCALHUB</h1>
+      </div>
       <form onSubmit={handleSignUp} className="max-w-md m-auto pt-24">
         <h2 className="font-bold pb-2">Sign up to LocalHub today!</h2>
         <p>
